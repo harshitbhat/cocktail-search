@@ -1,7 +1,11 @@
 <div class="card mt-3">
   <div class="card-body">
-    <form class="input-group mb-3">
-      <input type="text" class="form-control" />
+    <form class="input-group mb-3" (submit)="onSubmit($event)">
+      <input
+        type="text"
+        class="form-control"
+        (input)="getQueryString($event)"
+      />
       <div class="input-group-append">
         <div class="btn btn-primary" type="submit">Submit</div>
       </div>
