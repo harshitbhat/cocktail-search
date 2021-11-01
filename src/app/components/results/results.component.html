@@ -6,9 +6,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Vodka</td>
-      <td>Here's some instructions.</td>
+    <tr *ngFor="let drink of drinks">
+      <td [innerHTML]="boldStr(drink.strDrink)"></td>
+      <td [innerHTML]="boldStr(drink.strInstructions)"></td>
     </tr>
   </tbody>
 </table>
